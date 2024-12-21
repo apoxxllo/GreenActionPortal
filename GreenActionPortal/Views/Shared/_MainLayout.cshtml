@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Ibabao-Estancia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #265338;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #265338;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .login-card {
+            background-color: #225c33;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .login-card label, .login-card a {
+            color: white;
+        }
+        .footer {
+            background-color: #265338;
+            padding: 1rem;
+        }
+        .footer a {
+            color: white;
+        }
+        .footer img {
+            width: 80px;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Green Action Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="#">History</a></li>
+                            <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="communityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Community Information</a>
+                        <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                            <li><a class="dropdown-item" href="#">News</a></li>
+                            <li><a class="dropdown-item" href="#">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="wasteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Waste Management</a>
+                        <ul class="dropdown-menu" aria-labelledby="wasteDropdown">
+                            <li><a class="dropdown-item" href="#">Recycling Tips</a></li>
+                            <li><a class="dropdown-item" href="#">Collection Schedule</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                        <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                            <li><a class="dropdown-item" href="#">Workshops</a></li>
+                            <li><a class="dropdown-item" href="#">Volunteer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline-light">Log In</a>
+            </div>
+        </div>
+    </nav>
+
+    @* <div class="hero text-center text-white">
+        <div>
+            <h1>Barangay Ibabao-Estancia Green Initiatives</h1>
+            <p>Your Guide to Eco-Friendly Living</p>
+        </div>
+    </div> *@
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer class="footer text-center mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/80" alt="Barangay Logo">
+                    <p>Barangay Ibabao-Estancia<br>Mandaue City, Cebu, Philippines</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Barangay Ibabao-Estancia Headquarters<br>345-6352<br>Office of the Barangay Captain<br>077-896-8976<br>ibabao.estancia45@gmail.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Office Hours</h5>
+                    <p>8:00 AM - 5:00 PM<br>Monday to Friday</p>
+                    <h5>Connect With Us!</h5>
+                    <p>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

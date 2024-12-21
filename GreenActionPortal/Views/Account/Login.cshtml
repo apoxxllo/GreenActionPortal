@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="login-card">
+            <h2 class="text-center">Welcome Back Again</h2>
+            <p class="text-center">Please Enter Your Detail</p>
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Admin</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    <a href="#" class="float-end">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-light w-100">Log In</button>
+                <div class="text-center mt-3">
+                    <a href="#">Not official? Continue as Resident</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
