@@ -15,6 +15,8 @@ namespace GreenActionPortal.Controllers
         public BaseRepository<Official> _officialRepo;
         public BaseRepository<Population> _populationRepo;
         public BaseRepository<Position> _positionRepo;
+        public BaseRepository<SummaryWasteCollected> _summaryWasteCollectedRepo;
+        public BaseRepository<Year> _yearRepo;
 
         public BaseController()
         {
@@ -27,6 +29,8 @@ namespace GreenActionPortal.Controllers
             _populationRepo = new BaseRepository<Population>();
             _positionRepo = new BaseRepository<Position>();
             _garbageTypeRepo = new BaseRepository<GarbageType>();
+            _summaryWasteCollectedRepo = new BaseRepository<SummaryWasteCollected>();
+            _yearRepo = new BaseRepository<Year>();
         }
     }
 }

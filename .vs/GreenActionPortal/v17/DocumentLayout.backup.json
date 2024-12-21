@@ -1,49 +1,77 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\",
+  "WorkspaceRootPath": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\views\\shared\\_mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\views\\shared\\_mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\views\\home\\activities.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\views\\home\\activities.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\views\\home\\wastemanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\views\\home\\wastemanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\views\\home\\communityinformation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\views\\home\\communityinformation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\models\\greenactionportaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\models\\greenactionportaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\authentication\\signinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\authentication\\signinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\views\\shared\\_mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\views\\shared\\_mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\authentication\\customjwtdataformat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\authentication\\customjwtdataformat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\greenactionportal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\models\\greenactionportaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\models\\greenactionportaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\authentication\\signinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\authentication\\signinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\authentication\\customjwtdataformat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\authentication\\customjwtdataformat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\greenactionportal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\greenactionportal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\source\\repos\\greenactionportal\\greenactionportal\\contracts\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|c:\\users\\jilab\\onedrive\\documents\\github\\greenactionportal\\greenactionportal\\contracts\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA700B2E-66D8-4DF9-B4E1-0C75BD5472F3}|GreenActionPortal\\GreenActionPortal.csproj|solutionrelative:greenactionportal\\contracts\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -54,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,146 +94,220 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "GreenActionPortal\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "GreenActionPortal\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:30:11.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GreenActionPortalDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
-              "RelativeDocumentMoniker": "GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
-              "RelativeToolTip": "GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:25:45.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SignInManager.cs",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Authentication\\SignInManager.cs",
-              "RelativeDocumentMoniker": "GreenActionPortal\\Authentication\\SignInManager.cs",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Authentication\\SignInManager.cs",
-              "RelativeToolTip": "GreenActionPortal\\Authentication\\SignInManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:20:18.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "GreenActionPortal\\Repositories\\BaseRepository.cs",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "GreenActionPortal\\Repositories\\BaseRepository.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAASwA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T02:30:23.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_MainLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
-              "RelativeDocumentMoniker": "GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
-              "RelativeToolTip": "GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwB0AAAAlAAAAAAAAAA==",
+              "Title": "Activities.cshtml",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\Activities.cshtml",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Views\\Home\\Activities.cshtml",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\Activities.cshtml",
+              "RelativeToolTip": "GreenActionPortal\\Views\\Home\\Activities.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-21T03:06:48.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "GreenActionPortal\\Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "GreenActionPortal\\Controllers\\BaseController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAkwB0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:26:39.034Z",
+              "WhenOpened": "2024-12-21T16:32:44.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "GreenActionPortal\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "GreenActionPortal\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
+              "Title": "WasteManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\WasteManagement.cshtml",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Views\\Home\\WasteManagement.cshtml",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\WasteManagement.cshtml",
+              "RelativeToolTip": "GreenActionPortal\\Views\\Home\\WasteManagement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T16:32:33.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CommunityInformation.cshtml",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\CommunityInformation.cshtml",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Views\\Home\\CommunityInformation.cshtml",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\CommunityInformation.cshtml",
+              "RelativeToolTip": "GreenActionPortal\\Views\\Home\\CommunityInformation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T16:32:04.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AboutUs.cshtml",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\AboutUs.cshtml",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Views\\Home\\AboutUs.cshtml",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\AboutUs.cshtml",
+              "RelativeToolTip": "GreenActionPortal\\Views\\Home\\AboutUs.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAYwFYAAAB1AQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T16:26:59.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Repositories\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "GreenActionPortal\\Repositories\\BaseRepository.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAASwA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:17:21.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T02:30:23.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "GreenActionPortal\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T03:30:11.668Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "CustomJwtDataFormat.cs",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Authentication\\CustomJwtDataFormat.cs",
-              "RelativeDocumentMoniker": "GreenActionPortal\\Authentication\\CustomJwtDataFormat.cs",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Authentication\\CustomJwtDataFormat.cs",
-              "RelativeToolTip": "GreenActionPortal\\Authentication\\CustomJwtDataFormat.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAiwHIAAABEAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Program.cs",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Program.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Program.cs",
+              "RelativeToolTip": "GreenActionPortal\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:24:06.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T13:44:55.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_MainLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
+              "RelativeToolTip": "GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T03:06:48.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\appsettings.json",
+              "RelativeDocumentMoniker": "GreenActionPortal\\appsettings.json",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\appsettings.json",
+              "RelativeToolTip": "GreenActionPortal\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-21T13:45:18.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\Home.cshtml",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Views\\Home\\Home.cshtml",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Home\\Home.cshtml",
+              "RelativeToolTip": "GreenActionPortal\\Views\\Home\\Home.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T13:50:35.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "GreenActionPortal\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T03:26:39.034Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Views\\Account\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "GreenActionPortal\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "GreenActionPortal\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAABBwBkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-21T03:17:40.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T03:17:40.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GreenActionPortal",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj",
-              "RelativeDocumentMoniker": "GreenActionPortal\\GreenActionPortal.csproj",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj",
-              "RelativeToolTip": "GreenActionPortal\\GreenActionPortal.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-21T03:19:26.061Z",
-              "EditorCaption": ""
+              "DocumentIndex": 14,
+              "Title": "SignInManager.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Authentication\\SignInManager.cs",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Authentication\\SignInManager.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Authentication\\SignInManager.cs",
+              "RelativeToolTip": "GreenActionPortal\\Authentication\\SignInManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T03:20:18.258Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "GreenActionPortal\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T03:17:21.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GreenActionPortalDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
+              "RelativeToolTip": "GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T03:25:45.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CustomJwtDataFormat.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Authentication\\CustomJwtDataFormat.cs",
+              "RelativeDocumentMoniker": "GreenActionPortal\\Authentication\\CustomJwtDataFormat.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Authentication\\CustomJwtDataFormat.cs",
+              "RelativeToolTip": "GreenActionPortal\\Authentication\\CustomJwtDataFormat.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAiwHIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T03:24:06.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GreenActionPortal.csproj",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj",
+              "RelativeDocumentMoniker": "GreenActionPortal\\GreenActionPortal.csproj",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj",
+              "RelativeToolTip": "GreenActionPortal\\GreenActionPortal.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-21T03:19:26.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Contracts\\IBaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Contracts\\IBaseRepository.cs",
               "RelativeDocumentMoniker": "GreenActionPortal\\Contracts\\IBaseRepository.cs",
-              "ToolTip": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\Contracts\\IBaseRepository.cs",
+              "ToolTip": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\Contracts\\IBaseRepository.cs",
               "RelativeToolTip": "GreenActionPortal\\Contracts\\IBaseRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T02:31:04.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T02:31:04.568Z"
             }
           ]
         },

@@ -7,7 +7,7 @@
         <div class="login-card">
             <h2 class="text-center">Welcome Back Again</h2>
             <p class="text-center">Please Enter Your Detail</p>
-            <form>
+            <form asp-controller="Account" asp-action="Login" method="post">
                 <div class="mb-3">
                     <label for="username" class="form-label">Admin</label>
                     <input type="text" class="form-control" id="username" placeholder="Enter your username">
@@ -23,7 +23,7 @@
                 </div>
                 <button type="submit" class="btn btn-light w-100">Log In</button>
                 <div class="text-center mt-3">
-                    <a href="#">Not official? Continue as Resident</a>
+                    <a href="~/Home/Home">Not official? Continue as Resident</a>
                 </div>
             </form>
         </div>

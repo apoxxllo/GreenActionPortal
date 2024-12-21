@@ -1,0 +1,90 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<style>
+    .about-page {
+        background-color: #265338; /* Dark green background */
+        color: white; /* White text for readability */
+        padding: 20px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #366548; /* Slightly lighter green for sections */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+            .section .content img {
+                width: 150px;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+
+        .section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+    .vision, .mission {
+        padding: 20px;
+        text-align: justify;
+    }
+
+        .vision h2, .mission h2 {
+            margin-top: 10px;
+        }
+
+</style>
+
+<div class="about-page">
+    <!-- History Section -->
+    <div class="section history">
+        <h2>HISTORY</h2>
+        <div class="content">
+            <img src="~/Images/ibabao barangay hall.jpg" alt="Barangay Hall">
+            <p>
+                <strong style="color: #c1ff72; font-size: 20px; ">Ibabao–Estancia.</strong> The double-barreled barangay of Ibabao-Estancia (which suggests a fusion) was once one with the poblacion. It is situated at its northern portion; here a road cuts through the heart of Mandaue and leads straight up to Daanbantayan municipality in northern Cebu. When people would go to this northern part of the poblacion they say, “Mo adto ako sa Ibabaw,” (I will go to the upper part).
+
+                Ibabao, meaning “up” (or northwards, as the case may be) was later distinguished from “Centro” ,the middle part of the poblacion, and was eventually seceded from it as a separate barangay.
+
+                Another take on the origin of Ibabao and Estancia states that the former meant “at a high place” where rainwater would begin to run to the sea; while the latter “Estancia” meant a wealthy place of residence because of the big houses of its citizens in the past. History suggests otherwise, in that Estancia may have gotten its name from a ranch in the area, quite plausibly the one donated to the Jesuits in 1599 (Mandaue City, 2024).
+                <!-- Add the rest of the history text here -->
+            </p>
+        </div>
+    </div>
+
+    <!-- Vision Section -->
+    <div class="section vision">
+        <h2>VISION</h2>
+        <p>
+            Barangay Ibabao-Estancia envisions itself to become a premiere barangay in the City of Mandaue, vibrant and progressive in the arena of trade and commerce, environment friendly, and conductive to peace and order as a result of a participatory governance anchored in exemplary service and unwavering faith in God.            <!-- Add the full vision text here -->
+        </p>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="section mission">
+        <h2>MISSION</h2>
+        <p>
+            Barangay Ibabao-Estancia undertakes to uplift the quality of life of its residents through the prompt delivery of basic services; maintenance of peace and order to attract investments; and encouragement and promotion of the pursuit of knowledge , sports, and spirituality, thereby nurturing a citizenry that is socially aware of its rights and responsibilities.            <!-- Add the full mission text here -->
+        </p>
+    </div>
+</div>

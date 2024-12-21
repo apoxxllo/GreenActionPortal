@@ -31,7 +31,11 @@ public partial class GreenActionPortalDbContext : DbContext
 
     public virtual DbSet<Position> Positions { get; set; }
 
+    public virtual DbSet<SummaryWasteCollected> SummaryWasteCollecteds { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
+
+    public virtual DbSet<Year> Years { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -138,6 +142,20 @@ public partial class GreenActionPortalDbContext : DbContext
                 .HasColumnName("positionName");
         });
 
+        modelBuilder.Entity<SummaryWasteCollected>(entity =>
+        {
+            entity.ToTable("SummaryWasteCollected");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Can).HasColumnName("can");
+            entity.Property(e => e.Cartons).HasColumnName("cartons");
+            entity.Property(e => e.Month)
+                .HasMaxLength(50)
+                .HasColumnName("month");
+            entity.Property(e => e.Plastics).HasColumnName("plastics");
+            entity.Property(e => e.YearId).HasColumnName("year_id");
+        });
+
         modelBuilder.Entity<User>(entity =>
         {
             entity.Property(e => e.Id).HasColumnName("id");
@@ -157,6 +175,14 @@ public partial class GreenActionPortalDbContext : DbContext
             entity.Property(e => e.Username)
                 .HasMaxLength(50)
                 .HasColumnName("username");
+        });
+
+        modelBuilder.Entity<Year>(entity =>
+        {
+            entity.ToTable("Year");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.YearName).HasColumnName("yearName");
         });
 
         OnModelCreatingPartial(modelBuilder);

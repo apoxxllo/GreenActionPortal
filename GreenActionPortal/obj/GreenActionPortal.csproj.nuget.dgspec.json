@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj": {}
+    "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj": {
+    "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj",
+        "projectUniqueName": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj",
         "projectName": "GreenActionPortal",
-        "projectPath": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj",
+        "projectPath": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\GreenActionPortal.csproj",
         "packagesPath": "C:\\Users\\jilab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jilab\\source\\repos\\GreenActionPortal\\GreenActionPortal\\obj\\",
+        "outputPath": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jilab\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
