@@ -15,9 +15,11 @@ public partial class User
 
     public string? LastName { get; set; }
 
-    public string? Position { get; set; }
+    public int? PositionId { get; set; }
 
     public string? ProfilePicPath { get; set; }
 
     public virtual ICollection<Official> Officials { get; set; } = new List<Official>();
+
+    public virtual Position? Position { get; set; }
 }

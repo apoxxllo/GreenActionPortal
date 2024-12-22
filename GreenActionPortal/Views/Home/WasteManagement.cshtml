@@ -1,3 +1,442 @@
-﻿@{
+﻿@model GreenActionPortal.Models.WasteManagementViewModel
+@{
     Layout = "~/Views/Shared/_MainLayout.cshtml";
+    ViewData["Title"] = "Waste Management";
 }
+
+<div class="hero text-center text-white"
+     style="background: url('/Images/home-hero.png') no-repeat center center; height: 200px;">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <h1>BARANGAY IBABAO - ESTANCIA<br>WASTE MANAGEMENT</h1>
+    </div>
+</div>
+
+<div class="container mt-5">
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-success" style="border-radius: 0;" role="alert">
+            @TempData["message"]
+        </div>
+    }
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">
+            <h4>GARBAGE COLLECTION SCHEDULE</h4>
+        </div>
+        <div class="card-body">
+            <h5 class="text-center">GARBAGE COLLECTION SCHEDULE FOR BARANGAY IBABAO-ESTANCIA</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-bordered text-center text-white">
+                        <thead>
+                            <tr class="bg-success">
+                                <th style="background: #b1d3c1;">Biodegradable</th>
+                                <th style="background: #b1d3c1;">Non-Biodegradable</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="background: #87b857;">Monday</t>
+                                <td style="background: #e6d44d;">Tuesday</td>
+                            </tr>
+                            <tr>
+                                <td style="background: #87b857;">Wednesday</td>
+                                <td style="background: #e6d44d;">Thursday</td>
+                            </tr>
+                            <tr>
+                                <td style="background: #87b857;">Friday</td>
+                                <td colspan="2">This schedule applies to all sitios in the barangay.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <p>This schedule applies to all Puroks in the barangay to ensure effective segregation of waste and to support environmental sustainability. We kindly request all residents to properly segregate their garbage and follow the collection schedule for smooth and efficient waste management.</p>
+                    <p>Let us work together to maintain a clean and healthy Barangay Ibabo-Estancia!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="background: #557f67 !important;">
+        <div class="card-header bg-success text-white">
+            <h4>GARBAGE COLLECTION DATA</h4>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addGarbageModal">Add Data</button>
+            }
+        </div>
+
+        <div class="card-body">
+            <div class="d-flex mb-3">
+                @* <input type="text" class="form-control me-2" placeholder="Search Here"> *@
+                <select name="year" class="form-select me-2">
+                    <option value="">- Select Year -</option>
+                    <!-- Dynamically populate years here -->
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <!-- Add other years -->
+                </select>
+                <select name="month" class="form-select me-2">
+                    <option value="">- Select Month -</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                    <!-- Add other months -->
+                </select>
+                <button class="btn btn-success me-2">Filter</button>
+                <button class="btn btn-secondary">Reset</button>
+            </div>
+
+            <h5 class="text-center">GARBAGE COLLECTION DATA FOR BIODEGRADABLE <br />ALL TIME (MWF)</h5>
+            <table id="GarbageCollectionMWF" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>DAY</th>
+                        <th>1st TRIP</th>
+                        <th>2nd TRIP</th>
+                        <th>CARTONS (kg)</th>
+                        <th>PLASTICS (kg)</th>
+                        <th>CAN (kg)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.GarbageCollectionMWF)
+                    {
+                        <tr>
+                            <td>@item.Date.Value.ToString("MMMM-dd-yyyy")</td>
+                            <td>@item.Day</td>
+                            <td>@item.FirstTrip kg</td>
+                            @if (!item.SecondTrip.HasValue)
+                            {
+                                <td>0 kg</td>
+                            }
+                            else
+                            {
+                                <td>@item.SecondTrip kg</td>
+                            }
+                            <td>@item.Cartons</td>
+                            <td>@item.Plastics</td>
+                            <td>@item.Can</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <h5 class="text-center mt-4">GARBAGE COLLECTION DATA FOR NON-BIODEGRADABLE <br />ALL TIME (TTh)</h5>
+            <table id="GarbageCollectionTTh" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>DAY</th>
+                        <th>1st TRIP</th>
+                        <th>2nd TRIP</th>
+                        <th>CARTONS (kg)</th>
+                        <th>PLASTICS (kg)</th>
+                        <th>CAN (kg)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.GarbageCollectionTTh)
+                    {
+                        <tr>
+                            <td>@item.Date.Value.ToString("MMMM-dd-yyyy")</td>
+                            <td>@item.Day</td>
+                            <td>@item.FirstTrip kg</td>
+                            @if (!item.SecondTrip.HasValue)
+                            {
+                                <td>0 kg</td>
+                            }
+                            else
+                            {
+                                <td>@item.SecondTrip kg</td>
+                            }
+                            <td>@item.Cartons</td>
+                            <td>@item.Plastics</td>
+                            <td>@item.Can</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- Summary of Recyclable Waste Collected Section -->
+    <div class="card mt-4" style="background: #557f67 !important;">
+        <div class="card-header bg-success text-white">
+            <h4>SUMMARY OF RECYCLABLE WASTE COLLECTED</h4>
+        </div>
+        <div class="card-body">
+            <div class="d-flex mb-3">
+                @* <input type="text" class="form-control me-2" placeholder="Search Here" id="searchRecyclable"> *@
+               @*  <select name="year" class="form-select me-2" id="yearRecyclable">
+                    <option value="">- Select Year -</option>
+                    <!-- Dynamically populate years here -->
+                    <option value="2024">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <!-- Add other years -->
+                </select> *@
+               @*  <select name="month" class="form-select me-2" id="monthRecyclable">
+                    <option value="">- Select Month -</option>
+                    <option value="JAN">JAN</option>
+                    <option value="FEB">FEB</option>
+                    <option value="MAR">MAR</option>
+                    <option value="APR">APR</option>
+                    <option value="MAY">MAY</option>
+                    <option value="JUN">JUN</option>
+                    <option value="JUL">JUL</option>
+                    <option value="AUG">AUG</option>
+                    <option value="SEPT">SEPT</option>
+                    <option value="OCT">OCT</option>
+                    <option value="NOV">NOV</option>
+                    <option value="DEC">DEC</option>
+                </select> *@
+                @* <button class="btn btn-success" id="filterRecyclable">Filter</button> *@
+            </div>
+
+            <h5 class="text-center">SUMMARY OF RECYCLABLE WASTE COLLECTED</h5>
+            <h6 class="text-center">JANUARY - DECEMBER 2024</h6>
+
+            <table class="table table-bordered text-center" id="recyclableTable">
+                <thead>
+                    <tr>
+                        <th>TYPE</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEPT</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CARTONS</td>
+                        <td class="JAN">@ViewBag.JanuaryCartons</td>
+                        <td class="FEB">@ViewBag.FebruaryCartons</td>
+                        <td class="MAR">@ViewBag.MarchCartons</td>
+                        <td class="APR">@ViewBag.AprilCartons</td>
+                        <td class="MAY">@ViewBag.MayCartons</td>
+                        <td class="JUN">@ViewBag.JuneCartons</td>
+                        <td class="JUL">@ViewBag.JulyCartons</td>
+                        <td class="AUG">@ViewBag.AugustCartons</td>
+                        <td class="SEPT">@ViewBag.SeptemberCartons</td>
+                        <td class="OCT">@ViewBag.OctoberCartons</td>
+                        <td class="NOV">@ViewBag.NovemberCartons</td>
+                        <td class="DEC">@ViewBag.DecemberCartons</td>
+                        <td class="total"><span>@(ViewBag.JanuaryCartons + ViewBag.FebruaryCartons + ViewBag.MarchCartons + ViewBag.AprilCartons + ViewBag.MayCartons + ViewBag.JuneCartons + ViewBag.JulyCartons + ViewBag.AugustCartons + ViewBag.SeptemberCartons + ViewBag.OctoberCartons + ViewBag.NovemberCartons + ViewBag.DecemberCartons)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>PLASTICS</td>
+                        <td class="JAN">@ViewBag.JanuaryPlastics</td>
+                        <td class="FEB">@ViewBag.FebruaryPlastics</td>
+                        <td class="MAR">@ViewBag.MarchPlastics</td>
+                        <td class="APR">@ViewBag.AprilPlastics</td>
+                        <td class="MAY">@ViewBag.MayPlastics</td>
+                        <td class="JUN">@ViewBag.JunePlastics</td>
+                        <td class="JUL">@ViewBag.JulyPlastics</td>
+                        <td class="AUG">@ViewBag.AugustPlastics</td>
+                        <td class="SEPT">@ViewBag.SeptemberPlastics</td>
+                        <td class="OCT">@ViewBag.OctoberPlastics</td>
+                        <td class="NOV">@ViewBag.NovemberPlastics</td>
+                        <td class="DEC">@ViewBag.DecemberPlastics</td>
+                        <td class="total"><span>@(ViewBag.JanuaryPlastics + ViewBag.FebruaryPlastics + ViewBag.MarchPlastics + ViewBag.AprilPlastics + ViewBag.MayPlastics + ViewBag.JunePlastics + ViewBag.JulyPlastics + ViewBag.AugustPlastics + ViewBag.SeptemberPlastics + ViewBag.OctoberPlastics + ViewBag.NovemberPlastics + ViewBag.DecemberPlastics)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>CAN</td>
+                        <td class="JAN">@ViewBag.JanuaryCans</td>
+                        <td class="FEB">@ViewBag.FebruaryCans</td>
+                        <td class="MAR">@ViewBag.MarchCans</td>
+                        <td class="APR">@ViewBag.AprilCans</td>
+                        <td class="MAY">@ViewBag.MayCans</td>
+                        <td class="JUN">@ViewBag.JuneCans</td>
+                        <td class="JUL">@ViewBag.JulyCans</td>
+                        <td class="AUG">@ViewBag.AugustCans</td>
+                        <td class="SEPT">@ViewBag.SeptemberCans</td>
+                        <td class="OCT">@ViewBag.OctoberCans</td>
+                        <td class="NOV">@ViewBag.NovemberCans</td>
+                        <td class="DEC">@ViewBag.DecemberCans</td>
+                        <td class="total"><span>@(ViewBag.JanuaryCans + ViewBag.FebruaryCans + ViewBag.MarchCans + ViewBag.AprilCans + ViewBag.MayCans + ViewBag.JuneCans + ViewBag.JulyCans + ViewBag.AugustCans + ViewBag.SeptemberCans + ViewBag.OctoberCans + ViewBag.NovemberCans + ViewBag.DecemberCans)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Modal for Adding Garbage Data -->
+<div class="modal fade" id="addGarbageModal" tabindex="-1" aria-labelledby="addGarbageModalLabel" aria-hidden="true" style="color: black !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addGarbageModalLabel">Add Garbage Collection Data</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post" action="@Url.Action("AddGarbageData", "Home")">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" name="Date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="day" class="form-label">Day</label>
+                        <select class="form-select" id="day" name="Day" required>
+                            <option value="" selected disabled>Choose Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="firstTrip" class="form-label">1st Trip</label>
+                        <input type="number" class="form-control" id="firstTrip" name="FirstTrip" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="secondTrip" class="form-label">2nd Trip</label>
+                        <input type="number" class="form-control" id="secondTrip" name="SecondTrip">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cansKg" class="form-label">Cans (kg)</label>
+                        <input type="number" step="0.01" class="form-control" id="cansKg" name="CansKg">
+                    </div>
+                    <div class="mb-3">
+                        <label for="plasticsKg" class="form-label">Plastics (kg)</label>
+                        <input type="number" step="0.01" class="form-control" id="plasticsKg" name="PlasticsKg">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cartonsKg" class="form-label">Cartons (kg)</label>
+                        <input type="number" step="0.01" class="form-control" id="cartonsKg" name="CartonsKg">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <button type="submit" class="btn btn-success">Add Data</button>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // const searchInput = document.querySelector('input[type="text"]');
+        const yearSelect = document.querySelector('select[name="year"]');
+        const monthSelect = document.querySelector('select[name="month"]');
+        const filterButton = document.querySelector('.btn-success');
+        const resetButton = document.querySelector('.btn-secondary');
+
+        // Filter function
+        function filterData() {
+            // const searchTerm = searchInput.value.toLowerCase();
+            const selectedYear = yearSelect.value;
+            const selectedMonth = monthSelect.value;
+
+            // For each table (biodegradable and non-biodegradable)
+            ['GarbageCollectionMWF', 'GarbageCollectionTTh'].forEach(table => {
+                const rows = document.querySelectorAll(`#${table} tbody tr`);
+                rows.forEach(row => {
+                    let showRow = true;
+                    const dateCell = row.cells[0].textContent; // Date column for filtering
+                    const dayCell = row.cells[1].textContent; // Day column for filtering
+                    // Filter based on search term
+
+                    // Filter based on year
+                    if (selectedYear && !dateCell.includes(selectedYear)) {
+                        showRow = false;
+                    }
+
+                    // Filter based on month
+                    if (selectedMonth && !dateCell.includes(selectedMonth)) {
+                        showRow = false;
+                    }
+
+                    // Show or hide row
+                    row.style.display = showRow ? '' : 'none';
+                });
+            });
+        }
+
+        // Attach event listeners to trigger filtering
+        // searchInput.addEventListener('input', filterData);
+        yearSelect.addEventListener('change', filterData);
+        monthSelect.addEventListener('change', filterData);
+
+        // Reset filters when clicking the reset button
+        resetButton.addEventListener('click', function () {
+            // searchInput.value = '';
+            yearSelect.value = '';
+            monthSelect.value = '';
+            filterData(); // Reset the table
+        });
+
+        // Trigger filter on page load to show unfiltered data
+        filterData();
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // const searchInput = document.querySelector('#searchRecyclable');
+        // const yearSelect = document.querySelector('#yearRecyclable');
+        // const monthSelect = document.querySelector('#monthRecyclable');
+        // const filterButton = document.querySelector('#filterRecyclable');
+        const table = document.querySelector('#recyclableTable');
+
+        // Filter function
+        function filterData() {
+            // const searchTerm = searchInput.value.toLowerCase();
+            // const selectedYear = yearSelect.value;
+            // const selectedMonth = monthSelect.value;
+
+            const rows = table.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                let showRow = true;
+                const dateCell = row.cells[0].textContent;
+
+                // Show or hide row based on filtering
+                row.style.display = showRow ? '' : 'none';
+            });
+        }
+
+        // Trigger the filter on the button click
+        // filterButton.addEventListener('click', filterData);
+
+        // Optionally reset filters when user clicks reset button (if added)
+        document.querySelector('.btn-secondary').addEventListener('click', function () {
+            // searchInput.value = '';
+            // yearSelect.value = '';
+            monthSelect.value = '';
+            filterData();
+        });
+
+        // Trigger filter on page load
+        filterData();
+    });
+
+</script>

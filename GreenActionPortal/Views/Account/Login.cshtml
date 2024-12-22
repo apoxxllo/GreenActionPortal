@@ -3,29 +3,47 @@
 }
 
 <div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="login-card">
-            <h2 class="text-center">Welcome Back Again</h2>
-            <p class="text-center">Please Enter Your Detail</p>
+    <div class="hero text-center text-white"
+         style=" background: url('/Images/home-hero.png') no-repeat center center; opacity: 0.9">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <h1 style="color: white;">BARANGAY IBABAO-ESTANCIA GREEN INITIATIVES:<br>Your Guide to Eco-Friendly Living</h1>
+
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-5 mt-5">
+        <div class="card shadow-lg p-4" style="background: #47835f">
+            <h2 class="text-center" style="color: white !important;">Welcome Back Again</h2>
+            <p class="text-center" style="color: white !important;">Please Enter Your Details</p>
+            @if (TempData["error"] != null)
+            {
+                <div class="alert alert-danger" style="border-radius: 0;" role="alert">
+                    @TempData["error"]
+                </div>
+            }
             <form asp-controller="Account" asp-action="Login" method="post">
                 <div class="mb-3">
-                    <label for="username" class="form-label">Admin</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                    <label for="username" class="form-label" style="color: white !important;">Admin</label>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username">
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    <label for="password" class="form-label" style="color: white !important;">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="rememberMe">
-                    <label class="form-check-label" for="rememberMe">Remember Me</label>
-                    <a href="#" class="float-end">Forgot Password?</a>
+                    <label class="form-check-label" style="color: white !important;" for="rememberMe">Remember Me</label>
+                    <a href="#" class="float-end" style="color: white !important;">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn btn-light w-100">Log In</button>
+                <button type="submit" class="btn btn-success w-100" style="background: #6a9e80;">Log In</button>
                 <div class="text-center mt-3">
-                    <a href="~/Home/Home">Not official? Continue as Resident</a>
+                    <a href="~/Home/Home" style="color: white !important;">Not official? Continue as Resident</a>
                 </div>
             </form>
         </div>
+    </div>
+    <div class="col-md-6 col-lg-5 text-center mt-5">
+        <img src="/Images/ibabao estancia logo.png" alt="Ibabao-Estancia Logo" class="img-fluid rounded-circle shadow-lg" style="max-width: 300px;">
+        <h3 class="text-white mt-3">Barangay Ibabao-Estancia</h3>
+        <p class="text-white">Green Initiatives for a Sustainable Future</p>
     </div>
 </div>

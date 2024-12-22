@@ -1,12 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var profilePicPath = User.Claims
+                            .FirstOrDefault(c => c.Type == "ProfilePictureUrl" && c.Issuer == "greenactionportal")?.Value;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barangay Ibabao-Estancia</title>
+    <title>Barangay Ibabao-Estancia @ViewData["Title"]</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="~/Images/ibabao estancia logo.png" rel="icon" />
     <style>
         body {
             background-color: #265338;
@@ -105,6 +110,13 @@
             margin-right: 0.5rem;
         }
 
+        hr {
+            border: none; /* Remove the default border */
+            height: 5px; /* Thickness */
+            background-color: white; /* Color */
+            margin: 20px 0; /* Optional spacing */
+        }
+
     </style>
 </head>
 <body>
@@ -115,12 +127,39 @@
             <h1>Green Action Portal</h1>
             <p>Barangay Ibabao-Estancia, Mandaue</p>
         </div>
-        <a href="#" class="login-btn ms-auto d-flex align-items-center">
-            <div class="login-icon">
-                <i class="bi bi-person-circle"></i>
-            </div>
-            <span>Log-in</span>
-        </a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="user-info ms-auto d-flex align-items-center">
+                    <!-- User details -->
+                    <div class="user-details me-3 text-end text-white">
+                        <div class="user-name">@User.Identity.Name</div>
+                        <div class="user-role">@User.FindFirst("Position")</div> <!-- Replace with dynamic role -->
+                    </div>
+
+                    <!-- Profile picture with dropdown -->
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle user-profile-btn" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="@profilePicPath" alt="Profile Picture" class="profile-pic" style="border-radius: 50%;" onerror="this.onerror=null;this.src='/Images/defaultProfile.jpg';" />
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li>
+                                <form method="post" action="/Account/Logout">
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <a href="~/Account/Login" class="login-btn ms-auto d-flex align-items-center">
+                    <div class="login-icon">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+                    <span>Log-in</span>
+                </a>
+            }
     </div>
 
     <!-- Navigation Bar -->
@@ -142,22 +181,24 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="~/Home/CommunityInformation" id="communityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Community Information</a>
                         <ul class="dropdown-menu" aria-labelledby="communityDropdown">
-                            <li><a class="dropdown-item" href="~/Home/CommunityInformation">News</a></li>
-                            <li><a class="dropdown-item" href="~/Home/CommunityInformation">Events</a></li>
+                            <li><a class="dropdown-item" href="~/Home/CommunityInformation">Barangay Map</a></li>
+                            <li><a class="dropdown-item" href="~/Home/CommunityInformation">Population</a></li>
+                            <li><a class="dropdown-item" href="~/Home/CommunityInformation">Organizational Chart</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="~/Home/WasteManagement" id="wasteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Waste Management</a>
                         <ul class="dropdown-menu" aria-labelledby="wasteDropdown">
-                            <li><a class="dropdown-item" href="~/Home/WasteManagement">Recycling Tips</a></li>
-                            <li><a class="dropdown-item" href="~/Home/WasteManagement">Collection Schedule</a></li>
+                            <li><a class="dropdown-item" href="~/Home/WasteManagement">Schedule</a></li>
+                            <li><a class="dropdown-item" href="~/Home/WasteManagement">Summary</a></li>
+                            <li><a class="dropdown-item" href="~/Home/WasteManagement">Garbage Collection Data</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="~/Home/Activities" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
                         <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
-                            <li><a class="dropdown-item" href="~/Home/Activities">Workshops</a></li>
-                            <li><a class="dropdown-item" href="~/Home/Activities">Volunteer</a></li>
+                            <li><a class="dropdown-item" href="~/Home/Activities">Upcoming Activities</a></li>
+                            <li><a class="dropdown-item" href="~/Home/Activities">Recent Activities</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -174,17 +215,22 @@
         @RenderBody()
     </div>
 
-    <!-- Footer -->
+
+    <br />
+    <br />
+    <br />
+    <hr>
     <footer class="footer text-center mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <img src="~/Images/ibabao estancia logo.png" alt="Barangay Logo" style="max-width: 175px;">
-                    <p>Barangay Ibabao-Estancia<br>Mandaue City, Cebu, Philippines</p>
+                    <p class="mt-3">Barangay Ibabao-Estancia<br>Mandaue City, Cebu, Philippines</p>
+                    <p><i class="bi bi-geo-alt-fill"></i> 8WPV+2PG, G. Ouano Ext, Estancia, Mandaue City, 6014 Cebu</p>
                 </div>
                 <div class="col-md-4">
                     <h5>Contact Us</h5>
-                    <p>Barangay Ibabao-Estancia Headquarters<br>345-6352<br>Office of the Barangay Captain<br>077-896-8976<br>ibabao.estancia45@gmail.com</p>
+                    <p>Barangay Ibabao-Estancia Headquarters<br><i class="bi bi-telephone-fill"></i> &nbsp;345-0132<br>Office of the Barangay Captain<br><i class="bi bi-telephone-fill"></i> &nbsp;0917-708-6676<br><i class="bi bi-envelope"></i> &nbsp;ibabao.estancia143@gmail.com</p>
                 </div>
                 <div class="col-md-4">
                     <h5>Office Hours</h5>

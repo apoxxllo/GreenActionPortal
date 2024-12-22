@@ -39,7 +39,7 @@ public partial class GreenActionPortalDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=JULES-IRWIN\\SQLEXPRESS;Database=GreenActionPortalDB;Trusted_Connection=True;Integrated Security=True;TrustServerCertificate=True");
+        => optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Server=JULES-IRWIN\\SQLEXPRESS;Database=GreenActionPortalDB;Trusted_Connection=True;Integrated Security=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -168,13 +168,16 @@ public partial class GreenActionPortalDbContext : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(50)
                 .HasColumnName("password");
-            entity.Property(e => e.Position)
-                .HasMaxLength(50)
-                .HasColumnName("position");
+            entity.Property(e => e.PositionId).HasColumnName("position_id");
             entity.Property(e => e.ProfilePicPath).HasColumnName("profilePicPath");
             entity.Property(e => e.Username)
                 .HasMaxLength(50)
                 .HasColumnName("username");
+
+            entity.HasOne(d => d.Position).WithMany(p => p.Users)
+                .HasForeignKey(d => d.PositionId)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("FK_Users_Positions");
         });
 
         modelBuilder.Entity<Year>(entity =>

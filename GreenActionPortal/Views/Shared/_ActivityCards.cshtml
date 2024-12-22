@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Activity>
+
+<div class="d-flex gap-3">
+    @foreach (var act in Model)
+    {
+        <div class="card" style="width: 18rem; background: #265338;">
+            <img src="@act.PhotoPath" class="card-img-top" alt="@act.Title"
+                 style="max-width: 300px; min-height: 200px; max-height: 200px;"
+                 onerror="this.onerror=null;this.src='/Images/nullImage.png';">
+            <div class="card-body text-center">
+                <h6 style="color: white;">@act.Title</h6>
+                <h6 style="color: white;">Date: @act.Date.Value.ToString("MMMM dd, yyyy")</h6>
+                <!-- View button to trigger the modal -->
+                <button class="btn btn-light"
+                        data-bs-toggle="modal"
+                        data-bs-target="#viewActivityModal"
+                        data-title="@act.Title"
+                        data-description="@act.Description"
+                        data-photo="@act.PhotoPath"
+                        data-id="@act.Id">
+                    View →
+                </button>
+            </div>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="/Images/nullImage.jpg" class="card-img-top" alt="No Activities">
+            <div class="card-body text-center">
+                <h6>No activities found...</h6>
+            </div>
+        </div>
+    }
+</div>
+
+

@@ -1,6 +1,25 @@
 ﻿@{
     Layout = "~/Views/Shared/_MainLayout.cshtml";
+    var chartData = ViewBag.ChartData as dynamic;
+    ViewData["Title"] = "Dashboard";
 }
+
+<style>
+    #chartContainer {
+        width: 620px; /* Fixed width */
+        height: 400px; /* Fixed height */
+        margin: 0 auto; /* Center the chart horizontally */
+        background-color: #214622; /* Dark green background */
+        padding: 20px; /* Add some padding */
+        border-radius: 8px; /* Rounded corners for the container */
+    }
+
+    canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
 <div class="hero text-center text-white"
      style=" background: url('/Images/home-hero.png') no-repeat center center;">
@@ -26,57 +45,266 @@
     <div class="row mb-5">
         <div class="col-md-6">
             <h3 class="text-uppercase bg-secondary text-white p-2">Garbage Collection Schedule</h3>
-            <table class="table table-bordered text-center text-white">
+            <table style="height: 400px;" class="table table-bordered text-center text-white">
                 <thead>
                     <tr class="bg-success">
-                        <th>Biodegradable</th>
-                        <th>Non-Biodegradable</th>
+                        <th style="background: #b1d3c1;">Biodegradable</th>
+                        <th style="background: #b1d3c1;">Non-Biodegradable</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Monday</td>
-                        <td>Tuesday</td>
+                        <td style="background: #87b857;">Monday</t>
+                        <td style="background: #e6d44d;">Tuesday</td>
                     </tr>
                     <tr>
-                        <td>Wednesday</td>
-                        <td>Thursday</td>
+                        <td style="background: #87b857;">Wednesday</td>
+                        <td style="background: #e6d44d;">Thursday</td>
                     </tr>
                     <tr>
-                        <td>Friday</td>
+                        <td style ="background: #87b857;">Friday</td>
                         <td colspan="2">This schedule applies to all sitios in the barangay.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="col-md-6">
-            <h3 class="text-uppercase bg-secondary text-white p-2">Waste Collection Overview</h3>
-            <img src="/images/waste-collection-chart.jpg" class="img-fluid" alt="Waste Collection Chart">
+           
+            <h3 class="text-uppercase bg-secondary text-white p-2">Waste Collection Overview  <a href="~/Home/WasteManagement" class="btn" style="background: #6d757d;">View <i class="bi bi-eye"></i></a></h3>
+            <div id="chartContainer">
+                <canvas id="wasteCollectionChart"></canvas>
+            </div>
         </div>
+
     </div>
 
     <!-- Upcoming Activities -->
-    <div>
-        <h3 class="text-uppercase bg-secondary text-white p-2">Upcoming Activities</h3>
-        <div class="row text-center text-white">
-            <div class="col-md-4">
-                <div class="border border-light rounded p-3">
-                    <p>Activity 1</p>
-                    <a href="#" class="btn btn-light">View</a>
-                </div>
+
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">
+            <h4>UPCOMING ACTIVITIES</h4>
+        </div>
+        <div class="card-body" style="background: #557f67;">
+            <div class="d-flex mb-3">
+                <input type="text" id="searchUpcoming" class="form-control me-2" placeholder="Search Here">
+                <select id="yearFilterUpcoming" class="form-select me-2">
+                    <option value="">- Select Year -</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+
+                </select>
+                <select id="monthFilterUpcoming" class="form-select me-2">
+                    <option value="">- Select Month -</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <button id="resetUpcoming" class="btn btn-secondary ms-2">Reset</button>
             </div>
-            <div class="col-md-4">
-                <div class="border border-light rounded p-3">
-                    <p>Activity 2</p>
-                    <a href="#" class="btn btn-light">View</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="border border-light rounded p-3">
-                    <p>Activity 3</p>
-                    <a href="#" class="btn btn-light">View</a>
-                </div>
+
+            <div id="upcomingActivities" class="d-flex gap-3">
+                <!-- Dynamic Content for Upcoming Activities -->
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- Modal for Viewing Activity -->
+<div class="modal fade" id="viewActivityModal" tabindex="-1" aria-labelledby="viewActivityModalLabel" aria-hidden="true" style="color: black;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewActivityModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center">
+                <!-- Activity Photo on the left -->
+                <div class="me-3">
+                    <img src="" class="img-fluid" id="modalPhoto" style="max-width: 150px; height: auto;">
+                </div>
+                <!-- Activity Description on the right -->
+                <div>
+                    <p><strong>Description:</strong></p>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <!-- Pass the ID of the activity to the Edit action -->
+                    <a href="@Url.Action("EditActivity", "Home", new { id = "__ACTIVITY_ID__" })" id="editButton" class="btn btn-warning">Edit</a>
+                }
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+<script>
+    const ctx = document.getElementById('wasteCollectionChart').getContext('2d');
+
+    const chartData = @Html.Raw(Json.Serialize(ViewBag.ChartData));
+
+    // Now that chartData is properly structured, access biodegradable, nonBiodegradable, and months
+    const biodegradableData = chartData.biodegradable;
+    const nonBiodegradableData = chartData.nonBiodegradable;
+    const months = chartData.months;
+
+    const data = {
+        labels: months, // Use the dynamic months
+        datasets: [
+            {
+                label: 'Biodegradable',
+                data: biodegradableData,
+                backgroundColor: '#74C365', // Green
+            },
+            {
+                label: 'Non-Biodegradable',
+                data: nonBiodegradableData,
+                backgroundColor: '#FEE715', // Yellow
+            }
+        ]
+    };
+
+    const options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    color: '#FFFFFF' // Legend text color
+                }
+            },
+            datalabels: {
+                color: '#000000', // Label text color
+                font: {
+                    weight: 'italic',
+                },
+                anchor: 'center', // Position the labels in the middle of each bar segment
+                align: 'center', // Center-align the text
+                formatter: (value) => {
+                    return value.toLocaleString(); // Format numbers with commas
+                }
+            }
+        },
+        scales: {
+            x: {
+                stacked: true,
+                ticks: {
+                    color: '#FFFFFF' // X-axis labels color
+                }
+            },
+            y: {
+                stacked: true,
+                ticks: {
+                    color: '#FFFFFF' // Y-axis labels color
+                },
+                beginAtZero: true
+            }
+        }
+    };
+
+    const wasteCollectionChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options,
+        plugins: [ChartDataLabels] // Add the datalabels plugin
+    });
+
+
+    $(document).on('click', '[data-bs-toggle="modal"]', function () {
+        const button = $(this);
+        const title = button.data('title');
+        const description = button.data('description');
+        const photoPath = button.data('photo');
+        const id = button.data('id');
+
+        // Populate modal fields
+        $('#viewActivityModalLabel').text(title);
+        $('#modalDescription').text(description);
+        $('#modalPhoto').attr('src', photoPath);
+
+        // Update edit button URL
+        const editButton = $('#editButton');
+        editButton.attr('href', editButton.attr('href').replace('__ACTIVITY_ID__', id));
+    });
+
+
+    $(document).ready(function () {
+        // Filter and Search Handlers for Upcoming Activities
+        function loadUpcomingActivities() {
+            const search = $("#searchUpcoming").val();
+            const year = $("#yearFilterUpcoming").val();
+            const month = $("#monthFilterUpcoming").val();
+
+            $.ajax({
+                url: '/Home/FilterUpcoming',
+                type: 'GET',
+                data: { searchTerm: search, year: year, month: month },
+                success: function (data) {
+                    $("#upcomingActivities").html(data);
+                }
+            });
+        }
+
+        $("#searchUpcoming, #yearFilterUpcoming, #monthFilterUpcoming").on("change keyup", function () {
+            loadUpcomingActivities();
+        });
+
+        $("#resetUpcoming").on("click", function () {
+            $("#searchUpcoming").val("");
+            $("#yearFilterUpcoming").val("");
+            $("#monthFilterUpcoming").val("");
+            loadUpcomingActivities();
+        });
+
+        // Filter and Search Handlers for Recent Activities
+        function loadRecentActivities() {
+            const search = $("#searchRecent").val();
+            const year = $("#yearFilterRecent").val();
+            const month = $("#monthFilterRecent").val();
+
+            $.ajax({
+                url: '/Home/FilterRecent',
+                type: 'GET',
+                data: { searchTerm: search, year: year, month: month },
+                success: function (data) {
+                    $("#recentActivities").html(data);
+                }
+            });
+        }
+
+        $("#searchRecent, #yearFilterRecent, #monthFilterRecent").on("change keyup", function () {
+            loadRecentActivities();
+        });
+
+        $("#resetRecent").on("click", function () {
+            $("#searchRecent").val("");
+            $("#yearFilterRecent").val("");
+            $("#monthFilterRecent").val("");
+            loadRecentActivities();
+        });
+
+        // Initial Load
+        loadUpcomingActivities();
+        loadRecentActivities();
+    });
+</script>

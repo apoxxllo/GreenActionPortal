@@ -14,7 +14,7 @@ namespace GreenActionPortal.Repositories
         public DbSet<T> Table { get { return _table; } }
         public BaseRepository()
         {
-            _db = new GreenActionPortalDbContext();
+            _db = new DbAb0daaGreenportaldbContext();
             _table = _db.Set<T>();
         }
         public T Get(object id)

@@ -1,0 +1,64 @@
+﻿@model GreenActionPortal.Models.Activity
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Edit Activity";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4>Edit Activity</h4>
+                </div>
+                <div class="card-body">
+                    <!-- Edit Activity Form -->
+                    @using (Html.BeginForm("EditActivity", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label for="Title" class="form-label">Title</label>
+                            @Html.TextBoxFor(model => model.Title, new { @class = "form-control", placeholder = "Enter activity title", @required = "required" })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Description" class="form-label">Description</label>
+                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 4, placeholder = "Enter a description of the activity" })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Date" class="form-label">Date</label>
+                            @Html.TextBoxFor(model => model.Date, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Photo" class="form-label">Photo</label>
+
+                            <!-- Display the existing photo if available -->
+                            @if (!string.IsNullOrEmpty(Model.PhotoPath))
+                            {
+                                <div class="mb-2">
+                                    <img src="@Model.PhotoPath" class="img-fluid" alt="Current Activity Photo" style="max-height: 200px;" />
+                                </div>
+                            }
+
+                            <!-- File input for a new photo -->
+                            <input type="file" class="form-control" name="Photo" accept="image/*" />
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success">Save Changes</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

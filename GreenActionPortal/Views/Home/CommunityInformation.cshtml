@@ -1,3 +1,434 @@
-﻿@{
+﻿@model GreenActionPortal.Models.CommunityInformationViewModel
+@using static GreenActionPortal.Models.User
+
+@{
     Layout = "~/Views/Shared/_MainLayout.cshtml";
+    var captain = ViewBag.captain as User;
+    var chairman = ViewBag.skChairman as User;
+    var councilors = ViewBag.councilors as List<User>;
+    var treasurer = ViewBag.treasurer as User;
+    var secretary = ViewBag.secretary as User;
+
+    var mostRecentPopulation = Model.Population.OrderByDescending(p => p.Date).FirstOrDefault();
+    ViewData["Title"] = "Community Information";
 }
+
+<style>
+    .section-header {
+        font-size: 1.8rem;
+        background-color: #274d2c;
+        color: #ffffff;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .barangay-map-section .map-container {
+        overflow: hidden;
+    }
+
+    .barangay-map-section img.rounded-circle {
+        border: 5px solid #ffffff;
+    }
+
+    .population-section .chart-container {
+        height: 350px;
+    }
+
+    .population-section .population-stats img {
+        height: 40px;
+        width: auto;
+    }
+
+    .org-chart-section {
+        text-align: center;
+    }
+
+    .section-header {
+        font-size: 1.8rem;
+        background-color: #5c7e6a;
+        color: #ffffff;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .org-chart {
+        background-color: #5e806c !important;
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .org-row {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping to the next row */
+        justify-content: center; /* Centers the members */
+        gap: 10px; /* Adds space between members */
+    }
+
+    .org-member {
+        text-align: center;
+        margin: 10px;
+        flex: 1 1 calc(25% - 20px); /* Each member takes up 25% width minus the gap */
+        max-width: calc(25% - 20px); /* Ensures no more than 4 members per row */
+        box-sizing: border-box; /* Includes padding and borders in width calculation */
+    }
+
+        .org-member img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #274d2c;
+        }
+
+    .position {
+        font-size: 0.9rem;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .org-line {
+        border: 1px solid #ddd;
+        margin: 2rem 0;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #274d2c;
+        object-fit: cover;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="hero text-center text-white"
+     style=" background: url('/Images/home-hero.png') no-repeat center center;">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <h1>BARANGAY IBABAO - ESTANCIA<br>COMMUNITY INFORMATION</h1>
+    </div>
+</div>
+
+<div class="container-fluid bg-dark text-white py-5" style="background: #265338 !important;">
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-success" style="border-radius: 0;" role="alert">
+            @TempData["message"]
+        </div>
+    }
+    <!-- Barangay Map Section -->
+    <section class="barangay-map-section mb-5">
+        <h2 class="section-header">BARANGAY MAP</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="/Images/ibabao barangay hall.jpg" class="rounded-circle img-fluid shadow" alt="Barangay Hall" style="max-width: 300px;">
+                <p class="mt-3"><strong>BARANGAY HALL</strong></p>
+            </div>
+            <div class="col-md-6">
+                <div class="map-container border rounded shadow">
+                    <img src="/Images/ibabao google map.png" class="img-fluid" alt="Barangay Map">
+                    <p class="mt-2 text-center">
+                        <a href="https://maps.app.goo.gl/h5xs4P497D9jqfPS6" class="text-light text-decoration-underline" target="_blank">Google Map Link</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Population Statistics Section -->
+    <section class="population-section">
+        <h2 class="section-header">POPULATION</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="chart-container bg-light rounded p-3 shadow">
+                    <!-- Chart Placeholder -->
+                    <canvas id="populationChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="population-stats bg-light rounded p-3 shadow">
+                    <h5 style="color: black !important;"> Barangay Ibabao - Estancia</h5>
+                    <table class="table table-bordered text-center mt-3">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Population</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var population in Model.Population)
+                            {
+                                <tr>
+                                    <td>@population.Date.Value.ToString("yyyy-MM-dd")</td>
+                                    <td>@population.PopulationCensus?.ToString("N0")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-center align-items-center mt-3" style="color: black;">
+                        <i class="bi bi-people"></i> &nbsp; &nbsp;
+                        <strong>@mostRecentPopulation.PopulationCensus</strong> &nbsp; Population (@mostRecentPopulation.Date.Value.ToString("yyyy") - Census)
+                    </div>
+                    <!-- Add Data Button -->
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="text-center mt-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPopulationModal">
+                                Add Data
+                            </button>
+                        </div>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="org-chart-section">
+        <h2 class="section-header mt-3">BARANGAY IBABAO - ESTANCIA ORGANIZATIONAL CHART</h2>
+        <div class="org-chart">
+            <!-- Barangay Captain -->
+            <div class="org-row text-center">
+                <div class="org-member">
+                    <img src="@captain.ProfilePicPath" class="profile-img" alt="Barangay Captain" onerror="this.onerror=null;this.src='/Images/defaultProfile.jpg';">
+                    <p class="name"><strong>@captain.LastName, @captain.FirstName</strong></p>
+                    <p class="position">Barangay Captain</p>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" onclick="populateModal(this)" data-id="@captain.Id"
+                                data-firstname="@captain.FirstName"
+                                data-lastname="@captain.LastName"
+                                data-profilepic="@captain.ProfilePicPath">
+                            Edit
+                        </button>
+                    }
+                  
+                </div>
+            </div>
+            <div class="org-line"></div>
+
+            <!-- Councilors Row -->
+            <div class="org-row">
+                <!-- Edit Button for Councilors -->
+                @foreach (var councilor in councilors)
+                {
+                    <div class="org-member">
+                        <img src="@councilor.ProfilePicPath" class="profile-img" alt="@councilor.LastName, @councilor.FirstName" onerror="this.onerror=null;this.src='/Images/defaultProfile.jpg';">
+                        <p class="name"><strong>@councilor.LastName, @councilor.FirstName</strong></p>
+                        <p class="position">Councilor</p>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal"
+                                    data-id="@councilor.Id"
+                                    data-firstname="@councilor.FirstName"
+                                    data-lastname="@councilor.LastName"
+                                    data-profilepic="@councilor.ProfilePicPath"
+                                    onclick="populateModal(this)">
+                                Edit
+                            </button>
+                        }
+                        
+                    </div>
+                }
+
+            </div>
+            <div class="org-line"></div>
+
+            <!-- SK Chairman -->
+            <div class="org-row text-center">
+                <div class="org-member">
+                    <img src="@chairman.ProfilePicPath" class="profile-img" alt="SK Chairman" onerror="this.onerror=null;this.src='/Images/defaultProfile.jpg';">
+                    <p class="name"><strong>@chairman.LastName, @chairman.FirstName</strong></p>
+                    <p class="position">SK Chairman</p>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" onclick="populateModal(this)" data-id="@chairman.Id"
+                                data-firstname="@chairman.FirstName"
+                                data-lastname="@chairman.LastName"
+                                data-profilepic="@chairman.ProfilePicPath">
+                            Edit
+                        </button>
+                    }
+                  
+                </div>
+            </div>
+            <div class="org-line"></div>
+
+            <!-- Treasurer and Secretary -->
+            <div class="org-row">
+                <div class="org-member">
+                    <img src="@treasurer.ProfilePicPath" class="profile-img" alt="Barangay Treasurer" onerror="this.onerror=null;this.src='/Images/defaultProfile.jpg';">
+                    <p class="name"><strong>@treasurer.LastName, @treasurer.FirstName</strong></p>
+                    <p class="position">Barangay Treasurer</p>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" onclick="populateModal(this)" data-id="@treasurer.Id"
+                                data-firstname="@treasurer.FirstName"
+                                data-lastname="@treasurer.LastName"
+                                data-profilepic="@treasurer.ProfilePicPath">
+                            Edit
+                        </button>
+                    }
+                    
+                </div>
+                <div class="org-member">
+                    <img src="@secretary.ProfilePicPath" class="profile-img" alt="Barangay Secretary" onerror="this.onerror=null;this.src='/Images/defaultProfile.jpg';">
+                    <p class="name"><strong>@secretary.LastName, @secretary.FirstName</strong></p>
+                    <p class="position">Barangay Secretary</p>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" onclick="populateModal(this)" data-id="@secretary.Id"
+                                data-firstname="@secretary.FirstName"
+                                data-lastname="@secretary.LastName"
+                                data-profilepic="@secretary.ProfilePicPath">
+                            Edit
+                        </button>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Add Population Modal -->
+<div class="modal fade" id="addPopulationModal" tabindex="-1" aria-labelledby="addPopulationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="AddPopulation" asp-controller="Home" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPopulationModalLabel" style="color: black;">Add Population Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="date" class="form-label" style="color: black;">Date</label>
+                        <input type="date" class="form-control" id="date" name="Date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="population" class="form-label" style="color: black;">Population Census</label>
+                        <input type="number" class="form-control" id="population" name="PopulationCensus" min="0" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel" style="color: black;">Edit Official</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="editForm" method="post" enctype="multipart/form-data" action="@Url.Action("EditOfficial", "Home")">
+                <div class="modal-body">
+                    <input type="hidden" name="Id" id="officialId" />
+                    <div class="mb-3">
+                        <label for="officialName" class="form-label" style="color: black;">First Name</label>
+                        <input type="text" class="form-control" id="officialFName" name="firstName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="officialName" class="form-label" style="color: black;">Last Name</label>
+                        <input type="text" class="form-control" id="officialLName" name="lastName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="profilePicture" class="form-label" style="color: black;">Profile Picture</label>
+                        <input type="file" class="form-control" id="profilePicture" name="ProfilePic" />
+                    </div>
+                    <div class="mb-3">
+                        <img id="previewImage" src="" class="img-fluid" onerror="handleImageError(this)" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Ensure ViewBag data is serialized properly
+    const populationData = JSON.parse('@Html.Raw(ViewBag.PopulationData)');
+
+    // Debugging: Log the data to check if it's correctly passed
+    console.log('Population Data:', populationData);
+
+    // If the data exists, process it for the chart
+    if (populationData && Array.isArray(populationData)) {
+        const labels = populationData.map(p => p.Date); // Extract labels (dates)
+        const dataPoints = populationData.map(p => p.Population); // Extract data points (population)
+
+        console.log('Labels:', labels); // Debugging
+        console.log('Data Points:', dataPoints); // Debugging
+
+        // Render the chart
+        const ctx = document.getElementById('populationChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Population',
+                    data: dataPoints,
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                    },
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    } else {
+        console.error('Population data is invalid or undefined.');
+    }
+
+    function populateModal(button) {
+        // Get the data attributes from the button
+        var id = button.getAttribute('data-id');
+        var firstName = button.getAttribute('data-firstname');
+        var lastName = button.getAttribute('data-lastname');
+        var profilePicPath = button.getAttribute('data-profilepic');
+
+        // Set the modal input fields
+        document.getElementById('officialId').value = id;
+        document.getElementById('officialFName').value = firstName;
+        document.getElementById('officialLName').value = lastName;
+        var previewImage = document.getElementById('previewImage');
+        previewImage.src = profilePicPath || '/Images/defaultProfile.jpg';
+    }
+
+    function handleImageError(image) {
+        // image.onerror = null; // Prevent infinite loop if the fallback image also fails
+        image.src = '/Images/defaultProfile.jpg'; // Fallback image
+    }   
+
+</script>
+

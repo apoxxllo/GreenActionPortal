@@ -628,3 +628,6 @@ C:\Users\jilab\OneDrive\Documents\GitHub\GreenActionPortal\GreenActionPortal\bin
 C:\Users\jilab\OneDrive\Documents\GitHub\GreenActionPortal\GreenActionPortal\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\jilab\OneDrive\Documents\GitHub\GreenActionPortal\GreenActionPortal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\jilab\OneDrive\Documents\GitHub\GreenActionPortal\GreenActionPortal\obj\Debug\net8.0\GreenActionPortal.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jilab\OneDrive\Documents\GitHub\GreenActionPortal\GreenActionPortal\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\jilab\OneDrive\Documents\GitHub\GreenActionPortal\GreenActionPortal\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\jilab\OneDrive\Documents\GitHub\GreenActionPortal\GreenActionPortal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll

@@ -5,6 +5,74 @@
       "PackagePath": "staticwebassets\\GreenActionPortal.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\Untitled design.png",
+      "PackagePath": "staticwebassets\\Attachments\\Untitled design.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\cabahugProfile.png",
+      "PackagePath": "staticwebassets\\Attachments\\cabahugProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\cursor.png",
+      "PackagePath": "staticwebassets\\Attachments\\cursor.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\defaultProfile.jpg",
+      "PackagePath": "staticwebassets\\Attachments\\defaultProfile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\delmarProfile.png",
+      "PackagePath": "staticwebassets\\Attachments\\delmarProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\echavezProfile.png",
+      "PackagePath": "staticwebassets\\Attachments\\echavezProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\f460472c-c389-45c0-9eb7-dd0383dd6cd9.png",
+      "PackagePath": "staticwebassets\\Attachments\\f460472c-c389-45c0-9eb7-dd0383dd6cd9.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\my pic animated.jpg",
+      "PackagePath": "staticwebassets\\Attachments\\my pic animated.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\ouanoProfile.png",
+      "PackagePath": "staticwebassets\\Attachments\\ouanoProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\parolMaking.png",
+      "PackagePath": "staticwebassets\\Attachments\\parolMaking.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\play button.png",
+      "PackagePath": "staticwebassets\\Attachments\\play button.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\quimqueProfile.png",
+      "PackagePath": "staticwebassets\\Attachments\\quimqueProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\socoProfile.png",
+      "PackagePath": "staticwebassets\\Attachments\\socoProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\trashApp.png",
+      "PackagePath": "staticwebassets\\Attachments\\trashApp.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\villamorProfile.png",
+      "PackagePath": "staticwebassets\\Attachments\\villamorProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Attachments\\ygayProfile.png",
+      "PackagePath": "staticwebassets\\Attachments\\ygayProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\defaultProfile.jpg",
+      "PackagePath": "staticwebassets\\Images\\defaultProfile.jpg"
+    },
+    {
       "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\home-hero.png",
       "PackagePath": "staticwebassets\\Images\\home-hero.png"
     },
@@ -15,6 +83,18 @@
     {
       "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\ibabao estancia logo.png",
       "PackagePath": "staticwebassets\\Images\\ibabao estancia logo.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\ibabao google map.png",
+      "PackagePath": "staticwebassets\\Images\\ibabao google map.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\nullImage.jpg",
+      "PackagePath": "staticwebassets\\Images\\nullImage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\nullImage.png",
+      "PackagePath": "staticwebassets\\Images\\nullImage.png"
     },
     {
       "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\css\\site.css",
