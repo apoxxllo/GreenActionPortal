@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0HVkB/3isANd/UC115IVdrY1CU8FQjoVrdDmgDbwBt8=",
+  "Hash": "F0SiHXKiaOStmeJez9EVZqKmH6hPNI0LHPpjaBeqQZc=",
   "Source": "GreenActionPortal",
   "BasePath": "_content/GreenActionPortal",
   "Mode": "Default",
@@ -851,6 +851,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\defaultProfile.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\hazard.png",
+      "SourceId": "GreenActionPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\",
+      "BasePath": "_content/GreenActionPortal",
+      "RelativePath": "Images/hazard.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\hazard.png"
     },
     {
       "Identity": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\home-hero.png",

@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Activity>
 
-<div class="d-flex gap-3">
+<div class="d-flex gap-3 flex-wrap">
     @foreach (var act in Model)
     {
         <div class="card" style="width: 18rem; background: #265338;">
@@ -10,8 +10,9 @@
             <div class="card-body text-center">
                 <h6 style="color: white;">@act.Title</h6>
                 <h6 style="color: white;">Date: @act.Date.Value.ToString("MMMM dd, yyyy")</h6>
+
                 <!-- View button to trigger the modal -->
-                <button class="btn btn-light"
+                <button class="btn btn-light mb-2 mr-2"
                         data-bs-toggle="modal"
                         data-bs-target="#viewActivityModal"
                         data-title="@act.Title"
@@ -20,6 +21,19 @@
                         data-id="@act.Id">
                     View →
                 </button>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <!-- Delete button to trigger the delete confirmation modal -->
+                    <button class="btn btn-danger mb-2 ml-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteActivityModal"
+                            data-id="@act.Id"
+                            data-title="@act.Title">
+                        Delete
+                    </button>
+                }
+                
             </div>
         </div>
     }
@@ -34,5 +48,3 @@
         </div>
     }
 </div>
-
-

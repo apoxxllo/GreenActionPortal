@@ -4,6 +4,9 @@
     ViewData["Title"] = "About Us";
 }
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     .about-page {
         background-color: #265338; /* Dark green background */
         color: white; /* White text for readability */
@@ -64,12 +67,13 @@
 <div class="about-page">
     
     <!-- History Section -->
-    <div class="section history">
-        <h2>HISTORY</h2>
+    <div class="section history" id="history">
+        <h2 style="font-weight: bolder;">HISTORY</h2>
         <div class="history content" >
             <img src="~/Images/ibabao barangay hall.jpg" alt="Barangay Hall" style="min-width: 450px; border-radius: 30px;">
             <p id="history content">
-                <strong style="color: #c1ff72; font-size: 20px; ">Ibabao–Estancia.</strong> @Model.History
+                <strong style="color: #c1ff72; font-size: 20px; ">Ibabao–Estancia.</strong>             @Html.Raw(Model.History.Replace("Mandaue City, 2024", "<a href='https://www.mandauecity.gov.ph/about/barangays/ibabao-estancia?fbclid=IwZXh0bgNhZW0CMTEAAR0Pdp9_K8GZAlLcE6m_lZR-AThqe_UVW_gkenE_fUj4-99dwUrN62zVh7I_aem_Ro9pnaPPROyLbYjfTF9XEw' target='_blank' style='color: #72c1ff; text-decoration: underline;'>Mandaue City, 2024</a>"))
+
                 <!-- Add the rest of the history text here -->
             </p>
         </div>
@@ -80,8 +84,8 @@
         <button class="btn btn-secondary mb-2" style="float: right; margin-top: -20px; margin-right: -20px;" data-bs-toggle="modal" data-bs-target="#editModal" onclick="populateModal('vision')">Edit</button>
     }
     <!-- Vision Section -->
-    <div class="section vision">
-        <h2>VISION</h2>
+    <div class="section vision" id="vision">
+        <h2 style="font-weight: bolder;">VISION</h2>
         <p id="vision content">
             @Model.Vision
         </p>
@@ -93,8 +97,8 @@
     }
 
     <!-- Mission Section -->
-    <div class="section mission" >
-        <h2>MISSION</h2>
+    <div class="section mission" id="mission">
+        <h2 style="font-weight: bolder;">MISSION</h2>
         <p id="mission content">
             @Model.Mission
         </p>

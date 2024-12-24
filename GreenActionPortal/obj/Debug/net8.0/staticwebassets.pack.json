@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\Images\\defaultProfile.jpg"
     },
     {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\hazard.png",
+      "PackagePath": "staticwebassets\\Images\\hazard.png"
+    },
+    {
       "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\home-hero.png",
       "PackagePath": "staticwebassets\\Images\\home-hero.png"
     },

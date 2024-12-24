@@ -13,6 +13,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link href="~/Images/ibabao estancia logo.png" rel="icon" />
     <style>
+        /* Align links and dropdown toggles side by side */
+        .nav-item {
+            display: flex;
+            align-items: center;
+            margin-right: 3px;
+            border-radius: 5px;
+        }
+        .nav-item:hover{
+            background: green;
+        }
+            .nav-item .nav-link {
+                margin-right: 5px; /* Spacing between text and toggle */
+            }
+
+            .nav-item .btn.dropdown-toggle {
+                padding: 0;
+                background: none;
+                border: none;
+                font-size: 0.8rem; /* Adjust size of caret */
+                margin-left: 2px;
+            }
+
+        /* Optional: Remove default button styling */
+        .btn.dropdown-toggle::after {
+            display: inline-block;
+            margin-left: 0.3em;
+            vertical-align: middle;
+            content: "▼";
+            font-size: 0.6em;
+            color: #fff;
+            margin-right: 6px;
+        }
+
+
         body {
             background-color: #265338;
             color: white;
@@ -170,43 +204,60 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="~/Home/Home">Home</a></li>
+                    <!-- Home link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Home/Home">Home</a>
+                    </li>
+
+                    <!-- About Us dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="~/Home/AboutUs" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <a class="nav-link" href="~/Home/AboutUs">About Us</a>
+                        <button class="dropdown-toggle btn btn-link" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="~/Home/AboutUs">History</a></li>
-                            <li><a class="dropdown-item" href="~/Home/AboutUs">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="~/Home/AboutUs#history">History</a></li>
+                            <li><a class="dropdown-item" href="~/Home/AboutUs#vision">Vision & Mission</a></li>
                         </ul>
                     </li>
+
+                    <!-- Community Information dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="~/Home/CommunityInformation" id="communityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Community Information</a>
+                        <a class="nav-link" href="~/Home/CommunityInformation">Community Information</a>
+                        <button class="dropdown-toggle btn btn-link" id="communityDropdown" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu" aria-labelledby="communityDropdown">
-                            <li><a class="dropdown-item" href="~/Home/CommunityInformation">Barangay Map</a></li>
-                            <li><a class="dropdown-item" href="~/Home/CommunityInformation">Population</a></li>
-                            <li><a class="dropdown-item" href="~/Home/CommunityInformation">Organizational Chart</a></li>
+                            <li><a class="dropdown-item" href="~/Home/CommunityInformation#map">Barangay Map</a></li>
+                            <li><a class="dropdown-item" href="~/Home/CommunityInformation#population">Population</a></li>
+                            <li><a class="dropdown-item" href="~/Home/CommunityInformation#chart">Organizational Chart</a></li>
                         </ul>
                     </li>
+
+                    <!-- Waste Management dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="~/Home/WasteManagement" id="wasteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Waste Management</a>
+                        <a class="nav-link" href="~/Home/WasteManagement">Waste Management</a>
+                        <button class="dropdown-toggle btn btn-link" id="wasteDropdown" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu" aria-labelledby="wasteDropdown">
-                            <li><a class="dropdown-item" href="~/Home/WasteManagement">Schedule</a></li>
-                            <li><a class="dropdown-item" href="~/Home/WasteManagement">Summary</a></li>
-                            <li><a class="dropdown-item" href="~/Home/WasteManagement">Garbage Collection Data</a></li>
+                            <li><a class="dropdown-item" href="~/Home/WasteManagement#schedule">Schedule</a></li>
+                            <li><a class="dropdown-item" href="~/Home/WasteManagement#data">Garbage Collection Data</a></li>
+                            <li><a class="dropdown-item" href="~/Home/WasteManagement#summary">Summary</a></li>
                         </ul>
                     </li>
+
+                    <!-- Activities dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="~/Home/Activities" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                        <a class="nav-link" href="~/Home/Activities">Activities</a>
+                        <button class="dropdown-toggle btn btn-link" id="activitiesDropdown" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
-                            <li><a class="dropdown-item" href="~/Home/Activities">Upcoming Activities</a></li>
-                            <li><a class="dropdown-item" href="~/Home/Activities">Recent Activities</a></li>
+                            <li><a class="dropdown-item" href="~/Home/Activities#upcoming">Upcoming Activities</a></li>
+                            <li><a class="dropdown-item" href="~/Home/Activities#recent">Recent Activities</a></li>
                         </ul>
                     </li>
                 </ul>
                 <div class="search-box">
-                    <input type="text" placeholder="Search">
-                    <button><i class="bi bi-search"></i></button>
+                    <input type="text" placeholder="Search" id="searchBox">
+                    <button onclick="performSearch()"><i class="bi bi-search"></i></button>
                 </div>
             </div>
+
+
         </div>
     </nav>
 
@@ -247,5 +298,44 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function performSearch() {
+            // Ensure the input element exists
+            const searchInputElement = document.getElementById('searchBox');
+            if (!searchInputElement) {
+                console.error("Search input not found.");
+                return;
+            }
+
+            const searchInput = searchInputElement.value.toLowerCase().trim(); // Get input, convert to lowercase, trim whitespace
+
+            const links = {
+                'home': '../Home/Home',
+                'about us': '../Home/AboutUs',
+                'history': '../Home/AboutUs#history',
+                'mission': '../Home/AboutUs#mission',
+                'vision': '../Home/AboutUs#vision',
+                'waste management': '../Home/WasteManagement',
+                'activities': '../Home/Activities',
+                'community information': '../Home/CommunityInformation',
+                'barangay map': '../Home/CommunityInformation#barangayMap',
+                'population': '../Home/CommunityInformation#population',
+                'organizational chart': '../Home/CommunityInformation#organizationalChart'
+            };
+
+            if (links[searchInput]) {
+                window.location.href = links[searchInput]; // Redirect to the matched link
+            } else {
+                alert('No matching section found. Please try again.');
+            }
+        }
+
+        // Add functionality for pressing "Enter" in the search box
+        document.getElementById('searchBox').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    </script>
 </body>
 </html>

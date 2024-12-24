@@ -1,6 +1,7 @@
 using GreenActionPortal.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Diagnostics;
 
@@ -124,8 +125,9 @@ namespace GreenActionPortal.Controllers
 
             var modelView = new CommunityInformationViewModel();
             var populationForTable = _populationRepo.GetAll();
+
             modelView.Population = populationForTable;
-            var population = _populationRepo.GetAll().Select(p => new
+            var population = _populationRepo.GetAll().OrderBy(p => p.Date).Select(p => new
             {
                 Date = p.Date.Value.ToString("yyyy"), // Format the date as year
                 Population = p.PopulationCensus
@@ -152,6 +154,20 @@ namespace GreenActionPortal.Controllers
             // Redirect back to the view with updated data
             return RedirectToAction("CommunityInformation");
         }
+
+        [HttpPost]
+        public IActionResult DeletePopulation(int id)
+        {
+            var populationRecord = _populationRepo.Table.FirstOrDefault(p => p.Id == id);
+            if (populationRecord != null)
+            {
+                _populationRepo.Delete(populationRecord.Id);
+            }
+            TempData["message"] = "Successfully deleted record!";
+            return RedirectToAction("CommunityInformation"); // Replace with your actual action name
+        }
+
+
 
         [HttpPost]
         public IActionResult EditOfficial(int Id, string firstName, string lastName, IFormFile ProfilePic)
@@ -352,6 +368,19 @@ namespace GreenActionPortal.Controllers
             return RedirectToAction("WasteManagement", "Home"); // Or return a JSON response or partial view, as needed
         }
 
+        [HttpPost]
+        public IActionResult DeleteGarbageCollection(int id)
+        {
+            var record = _garbageCollectionDataRepo.Table.FirstOrDefault(gc => gc.Id == id);
+            if (record != null)
+            {
+                _garbageCollectionDataRepo.Delete(record.Id);
+            }
+
+            TempData["message"] = "Successfully deleted record!";
+
+            return RedirectToAction("WasteManagement"); // Redirect to the relevant page after deletion
+        }
 
         public IActionResult Activities()
         {
@@ -430,6 +459,7 @@ namespace GreenActionPortal.Controllers
             return View(activity);
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditActivity(Models.Activity model, IFormFile photo)
@@ -463,6 +493,19 @@ namespace GreenActionPortal.Controllers
             return RedirectToAction("Activities"); // Redirect to a page after saving
         }
 
+        [HttpPost]
+        public IActionResult DeleteActivity(int id)
+        {
+            var activity = _activityRepo.Get(id);
+            if (activity == null)
+            {
+                return NotFound();
+            }
+
+            _activityRepo.Delete(activity.Id);
+            TempData["message"] = "Successfully deleted activity!";
+            return RedirectToAction("Activities"); // Replace "Index" with the appropriate view name
+        }
 
         public PartialViewResult FilterUpcoming(string searchTerm, int? year, int? month)
         {

@@ -6,7 +6,7 @@
 
 <style>
     #chartContainer {
-        width: 715px; /* Fixed width */
+        width: 721px; /* Fixed width */
         height: 400px; /* Fixed height */
         margin: 0 auto; /* Center the chart horizontally */
         background-color: #214622; /* Dark green background */
@@ -22,9 +22,9 @@
 </style>
 
 <div class="hero text-center text-white"
-     style=" background: url('/Images/home-hero.png') no-repeat center center;">
+     style=" background: url('/Images/home-hero.png') no-repeat center center; height: 200px;">
     <div class="d-flex justify-content-center align-items-center h-100">
-        <h1>WELCOME TO IBABAO-ESTANCIA<br>GREEN INITIATIVES PORTAL</h1>
+        <h1 style="font-weight: bolder;">WELCOME TO IBABAO-ESTANCIA<br>GREEN INITIATIVES PORTAL</h1>
     </div>
 </div>
 
@@ -36,16 +36,16 @@
             <img src="/Images/ibabao barangay hall.jpg" class="img-fluid rounded" alt="Barangay Hall">
         </div>
         <div class="col-md-8 text-white">
-            <h1 class="text-uppercase">Building a Sustainable Future Together!</h1>
+            <h1 class="text-uppercase" style="font-weight: bolder;">Building a Sustainable Future Together!</h1>
             <p>Barangay Ibabao-Estancia is committed to creating a sustainable and environmentally responsible community. This platform serves as your one-stop resource for all green initiatives in our barangay, providing essential tools and information to help every resident contribute to a cleaner and greener future.</p>
         </div>
     </div>
 
     <!-- Garbage Collection Schedule and Waste Collection Overview -->
     <div class="row mb-5">
-        <div class="col-md-4">
-            <h3 class="text-uppercase bg-secondary text-white p-2">Garbage Collection Schedule</h3>
-            <table style="height: 400px;" class="table table-bordered text-center text-white">
+        <div class="col-md-4" >
+            <h3 class="text-uppercase bg-secondary text-white p-2" style="font-weight: bolder; border-radius: 10px;">Garbage Collection Schedule</h3>
+            <table style="height: 400px; border-radius: 30px !important;" class="table table-bordered text-center text-white">
                 <thead>
                     <tr class="bg-success">
                         <th style="background: #b1d3c1;">Biodegradable</th>
@@ -70,10 +70,13 @@
         </div>
         <div class="col-md-8">
            
-            <h3 class="text-uppercase bg-secondary text-white p-2">Waste Collection Overview  <a href="~/Home/WasteManagement" class="btn" style="background: #6d757d;">View <i class="bi bi-eye"></i></a></h3>
+            <h3 class="text-uppercase bg-secondary text-white p-2" style="font-weight: bolder; border-radius: 10px;">Waste Collection Overview</h3>
             <div id="chartContainer">
                 <canvas id="wasteCollectionChart"></canvas>
             </div>
+            <a href="~/Home/WasteManagement" class="btn btn-sm text-white" style="background: #6d757d; width: 150px; font-weight: bold; border-radius: 5px; margin-left: 80%; margin-top: 10px;">
+                View <i class="bi bi-eye"></i>
+            </a>
         </div>
 
     </div>
@@ -82,7 +85,7 @@
 
     <div class="card mb-4">
         <div class="card-header bg-success text-white">
-            <h4>UPCOMING ACTIVITIES</h4>
+            <h4 style="font-weight: bolder;">UPCOMING ACTIVITIES</h4>
         </div>
         <div class="card-body" style="background: #557f67;">
             <div class="d-flex mb-3">
