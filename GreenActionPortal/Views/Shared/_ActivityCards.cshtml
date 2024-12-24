@@ -15,7 +15,7 @@
                         data-bs-toggle="modal"
                         data-bs-target="#viewActivityModal"
                         data-title="@act.Title"
-                        data-description="@act.Description"
+                        data-description="@Html.Raw(act.Description.Replace("<br>", "\n\n"))"
                         data-photo="@act.PhotoPath"
                         data-id="@act.Id">
                     View →

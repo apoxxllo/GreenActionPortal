@@ -6,6 +6,9 @@
     var recentActs = ViewBag.RecentActivities as List<Activity>;
 }
 
+<style>
+   
+</style>
 <div class="hero text-center text-white"
      style="background: url('/Images/home-hero.png') no-repeat center center; height: 200px;">
     <div class="d-flex justify-content-center align-items-center h-100">
@@ -106,7 +109,6 @@
     </div>
 </div>
 
-
 <!-- Modal for Adding Activity -->
 <div class="modal fade" id="addActivityModal" tabindex="-1" aria-labelledby="addActivityModalLabel" aria-hidden="true" style="color: black;">
     <div class="modal-dialog">
@@ -141,21 +143,22 @@
 </div>
 <!-- Modal for Viewing Activity -->
 <div class="modal fade" id="viewActivityModal" tabindex="-1" aria-labelledby="viewActivityModalLabel" aria-hidden="true" style="color: black;">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Use modal-lg for a larger modal -->
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="viewActivityModalLabel"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body d-flex align-items-center">
+            <div class="modal-body d-flex align-items-start flex-wrap" style="max-height: 70vh; overflow-y: auto;">
                 <!-- Activity Photo on the left -->
                 <div class="me-3">
                     <img src="" class="img-fluid" id="modalPhoto" style="max-width: 150px; height: auto;">
                 </div>
                 <!-- Activity Description on the right -->
-                <div>
+                <div style="flex: 1;">
                     <p><strong>Description:</strong></p>
-                    <p id="modalDescription"></p>
+                    <p id="modalDescription" style="white-space: pre-wrap;"></p>
                 </div>
             </div>
             <div class="modal-footer">
@@ -171,14 +174,19 @@
 </div>
 
 
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
     $(document).on('click', '[data-bs-toggle="modal"]', function () {
         const button = $(this);
         const title = button.data('title');
-        const description = button.data('description');
+        let description = button.data('description');
         const photoPath = button.data('photo');
         const id = button.data('id');
+
+        // Decode line breaks in the description
+        description = description.replace(/&#10;/g, '\n\n\n');
 
         // Populate modal fields
         $('#viewActivityModalLabel').text(title);
@@ -189,6 +197,7 @@
         const editButton = $('#editButton');
         editButton.attr('href', editButton.attr('href').replace('__ACTIVITY_ID__', id));
     });
+
 
 
     $(document).ready(function () {

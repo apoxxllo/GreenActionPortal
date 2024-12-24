@@ -6,7 +6,7 @@
 
 <style>
     #chartContainer {
-        width: 620px; /* Fixed width */
+        width: 715px; /* Fixed width */
         height: 400px; /* Fixed height */
         margin: 0 auto; /* Center the chart horizontally */
         background-color: #214622; /* Dark green background */
@@ -43,7 +43,7 @@
 
     <!-- Garbage Collection Schedule and Waste Collection Overview -->
     <div class="row mb-5">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h3 class="text-uppercase bg-secondary text-white p-2">Garbage Collection Schedule</h3>
             <table style="height: 400px;" class="table table-bordered text-center text-white">
                 <thead>
@@ -68,7 +68,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
            
             <h3 class="text-uppercase bg-secondary text-white p-2">Waste Collection Overview  <a href="~/Home/WasteManagement" class="btn" style="background: #6d757d;">View <i class="bi bi-eye"></i></a></h3>
             <div id="chartContainer">
@@ -122,19 +122,20 @@
 
 <!-- Modal for Viewing Activity -->
 <div class="modal fade" id="viewActivityModal" tabindex="-1" aria-labelledby="viewActivityModalLabel" aria-hidden="true" style="color: black;">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Use modal-lg for a larger modal -->
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="viewActivityModalLabel"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body d-flex align-items-center">
+            <div class="modal-body d-flex align-items-start flex-wrap" style="max-height: 70vh; overflow-y: auto;">
                 <!-- Activity Photo on the left -->
                 <div class="me-3">
                     <img src="" class="img-fluid" id="modalPhoto" style="max-width: 150px; height: auto;">
                 </div>
                 <!-- Activity Description on the right -->
-                <div>
+                <div style="flex: 1;">
                     <p><strong>Description:</strong></p>
                     <p id="modalDescription"></p>
                 </div>
