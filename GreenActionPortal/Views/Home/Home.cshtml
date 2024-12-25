@@ -44,8 +44,8 @@
     <!-- Garbage Collection Schedule and Waste Collection Overview -->
     <div class="row mb-5">
         <div class="col-md-4" >
-            <h3 class="text-uppercase bg-secondary text-white p-2" style="font-weight: bolder; border-radius: 10px;">Garbage Collection Schedule</h3>
-            <table style="height: 400px; border-radius: 30px !important;" class="table table-bordered text-center text-white">
+            <h4 class="text-uppercase bg-secondary text-white p-2" style="font-weight: bolder; border-radius: 10px; background: #5c7e6a !important;">Garbage Collection Schedule</h4>
+            <table style="height: 400px; border-radius: 20px !important; overflow: hidden;" class="table table-bordered text-center text-white">
                 <thead>
                     <tr class="bg-success">
                         <th style="background: #b1d3c1;">Biodegradable</th>
@@ -70,11 +70,11 @@
         </div>
         <div class="col-md-8">
            
-            <h3 class="text-uppercase bg-secondary text-white p-2" style="font-weight: bolder; border-radius: 10px;">Waste Collection Overview</h3>
+            <h3 class="text-uppercase bg-secondary text-white p-2" style="font-weight: bolder; border-radius: 10px; background: #5c7e6a !important;">Waste Collection Overview</h3>
             <div id="chartContainer">
                 <canvas id="wasteCollectionChart"></canvas>
             </div>
-            <a href="~/Home/WasteManagement" class="btn btn-sm text-white" style="background: #6d757d; width: 150px; font-weight: bold; border-radius: 5px; margin-left: 80%; margin-top: 10px;">
+            <a href="~/Home/WasteManagement" class="btn btn-sm text-white" style="background: green; width: 150px; font-weight: bold; border-radius: 5px; margin-left: 80%; margin-top: 10px;">
                 View <i class="bi bi-eye"></i>
             </a>
         </div>
@@ -112,7 +112,7 @@
                     <option value="11">November</option>
                     <option value="12">December</option>
                 </select>
-                <button id="resetUpcoming" class="btn btn-secondary ms-2">Reset</button>
+                <button id="resetUpcoming" class="btn btn-secondary ms-2" style="background: green;">Reset</button>
             </div>
 
             <div id="upcomingActivities" class="d-flex gap-3">
@@ -140,7 +140,7 @@
                 <!-- Activity Description on the right -->
                 <div style="flex: 1;">
                     <p><strong>Description:</strong></p>
-                    <p id="modalDescription"></p>
+                    <p id="modalDescription" style="white-space: pre-wrap;"></p>
                 </div>
             </div>
             <div class="modal-footer">
