@@ -71,9 +71,10 @@
         <h2 style="font-weight: bolder;">HISTORY</h2>
         <div class="history content" >
             <img src="~/Images/ibabao barangay hall.jpg" alt="Barangay Hall" style="min-width: 450px; border-radius: 30px;">
-            <p id="history content">
-                <strong style="color: #c1ff72; font-size: 20px; white-space: pre-wrap;">Ibabao–Estancia.</strong>             @Html.Raw(Model.History.Replace("Mandaue City, 2024", "<a href='https://www.mandauecity.gov.ph/about/barangays/ibabao-estancia?fbclid=IwZXh0bgNhZW0CMTEAAR0Pdp9_K8GZAlLcE6m_lZR-AThqe_UVW_gkenE_fUj4-99dwUrN62zVh7I_aem_Ro9pnaPPROyLbYjfTF9XEw' target='_blank' style='color: #72c1ff; text-decoration: underline;'>Mandaue City, 2024</a>"))
-
+            <p>
+                <strong style="color: #c1ff72; font-size: 20px; white-space: pre-wrap;">Ibabao–Estancia.</strong><span id="history content">
+                    @Html.Raw(Model.History.Replace("Mandaue City, 2024", "<a href='https://www.mandauecity.gov.ph/about/barangays/ibabao-estancia?fbclid=IwZXh0bgNhZW0CMTEAAR0Pdp9_K8GZAlLcE6m_lZR-AThqe_UVW_gkenE_fUj4-99dwUrN62zVh7I_aem_Ro9pnaPPROyLbYjfTF9XEw' target='_blank' style='color: #72c1ff; text-decoration: underline;'>Mandaue City, 2024</a>"))
+               </span>
                 <!-- Add the rest of the history text here -->
             </p>
         </div>
@@ -141,7 +142,6 @@
         function populateModal(section) {
             // Populate modal based on which section is being edited
             const content = document.getElementById(section + ' content').innerText;
-            console.log("ho " + content)
             document.getElementById('sectionTitle').value = section.charAt(0).toUpperCase() + section.slice(1).toLowerCase(); // History, Vision, Mission
             document.getElementById('sectionContent').value = content;
         }

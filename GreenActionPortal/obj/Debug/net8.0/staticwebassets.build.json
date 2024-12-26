@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F0SiHXKiaOStmeJez9EVZqKmH6hPNI0LHPpjaBeqQZc=",
+  "Hash": "rJ5aJQzPUdhBeKWQdeCkGex62K3K+kEt6Da/9hPW5jk=",
   "Source": "GreenActionPortal",
   "BasePath": "_content/GreenActionPortal",
   "Mode": "Default",
@@ -853,6 +853,25 @@
       "OriginalItemSpec": "wwwroot\\Images\\defaultProfile.jpg"
     },
     {
+      "Identity": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\gmap.png",
+      "SourceId": "GreenActionPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\",
+      "BasePath": "_content/GreenActionPortal",
+      "RelativePath": "Images/gmap.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\gmap.png"
+    },
+    {
       "Identity": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\hazard.png",
       "SourceId": "GreenActionPortal",
       "SourceType": "Discovered",
@@ -870,6 +889,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\hazard.png"
+    },
+    {
+      "Identity": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\hazardMap.png",
+      "SourceId": "GreenActionPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\",
+      "BasePath": "_content/GreenActionPortal",
+      "RelativePath": "Images/hazardMap.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\hazardMap.png"
     },
     {
       "Identity": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\home-hero.png",

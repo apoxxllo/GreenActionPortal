@@ -73,8 +73,16 @@
       "PackagePath": "staticwebassets\\Images\\defaultProfile.jpg"
     },
     {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\gmap.png",
+      "PackagePath": "staticwebassets\\Images\\gmap.png"
+    },
+    {
       "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\hazard.png",
       "PackagePath": "staticwebassets\\Images\\hazard.png"
+    },
+    {
+      "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\hazardMap.png",
+      "PackagePath": "staticwebassets\\Images\\hazardMap.png"
     },
     {
       "Id": "C:\\Users\\jilab\\OneDrive\\Documents\\GitHub\\GreenActionPortal\\GreenActionPortal\\wwwroot\\Images\\home-hero.png",
