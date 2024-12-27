@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GreenActionPortal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58cb3d4e3d84e14d2950d2aaacc4d5850b444c04")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9c100416d63ab1ba0b5c419134146258c35afe4")]
 [assembly: System.Reflection.AssemblyProductAttribute("GreenActionPortal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GreenActionPortal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

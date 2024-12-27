@@ -158,8 +158,7 @@
               "RelativeToolTip": "GreenActionPortal\\Views\\Home\\Activities.cshtml",
               "ViewState": "AgIAAJcAAAAAAAAAAAAAAKcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-21T16:32:44.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T16:32:44.543Z"
             },
             {
               "$type": "Document",
@@ -171,8 +170,7 @@
               "RelativeToolTip": "GreenActionPortal\\Views\\Home\\Home.cshtml",
               "ViewState": "AgIAACIAAAAAAAAAAAAgwC4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-21T13:50:35.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T13:50:35.962Z"
             },
             {
               "$type": "Document",
@@ -184,8 +182,7 @@
               "RelativeToolTip": "GreenActionPortal\\Views\\Home\\CommunityInformation.cshtml",
               "ViewState": "AgIAAK8AAAAAAAAAAAAswI8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-21T16:32:04.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T16:32:04.728Z"
             },
             {
               "$type": "Document",
@@ -197,8 +194,7 @@
               "RelativeToolTip": "GreenActionPortal\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAPEBAAAAAAAAAAAAwPsBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:30:11.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T03:30:11.668Z"
             },
             {
               "$type": "Document",
@@ -210,8 +206,7 @@
               "RelativeToolTip": "GreenActionPortal\\Views\\Shared\\_MainLayout.cshtml",
               "ViewState": "AgIAADYBAAAAAAAAAAAAADkBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-21T03:06:48.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T03:06:48.321Z"
             },
             {
               "$type": "Document",
@@ -236,8 +231,7 @@
               "RelativeToolTip": "GreenActionPortal\\Views\\Shared\\_ActivityCards.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-22T12:36:46.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T12:36:46.658Z"
             },
             {
               "$type": "Document",
@@ -249,8 +243,7 @@
               "RelativeToolTip": "GreenActionPortal\\Views\\Home\\WasteManagement.cshtml",
               "ViewState": "AgIAABQBAAAAAAAAAAAAwB8BAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-21T16:32:33.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T16:32:33.83Z"
             },
             {
               "$type": "Document",
@@ -274,8 +267,7 @@
               "RelativeToolTip": "GreenActionPortal\\Models\\DbAb0daaGreenportaldbContext.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAABRwCkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T13:17:47.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T13:17:47.706Z"
             },
             {
               "$type": "Document",
@@ -287,8 +279,7 @@
               "RelativeToolTip": "GreenActionPortal\\Models\\GreenActionPortalDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:25:45.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T03:25:45.957Z"
             },
             {
               "$type": "Document",
@@ -312,8 +303,7 @@
               "RelativeToolTip": "GreenActionPortal\\Repositories\\BaseRepository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAABRwBAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T02:30:23.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T02:30:23.833Z"
             },
             {
               "$type": "Document",
@@ -373,8 +363,7 @@
               "RelativeToolTip": "GreenActionPortal\\Models\\WasteManagementViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T09:20:35.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T09:20:35.101Z"
             },
             {
               "$type": "Document",
@@ -386,8 +375,7 @@
               "RelativeToolTip": "GreenActionPortal\\Models\\CommunityInformationViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T08:10:49.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T08:10:49.143Z"
             },
             {
               "$type": "Document",
@@ -399,8 +387,7 @@
               "RelativeToolTip": "GreenActionPortal\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAABRwBsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:17:21.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T03:17:21.029Z"
             },
             {
               "$type": "Document",
@@ -412,8 +399,7 @@
               "RelativeToolTip": "GreenActionPortal\\Authentication\\SignInManager.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAswFoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T03:20:18.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T03:20:18.258Z"
             },
             {
               "$type": "Document",
@@ -437,8 +423,7 @@
               "RelativeToolTip": "GreenActionPortal\\Models\\TokenAuthentication.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAABBwAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T03:40:07.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T03:40:07.137Z"
             },
             {
               "$type": "Document",
@@ -450,8 +435,7 @@
               "RelativeToolTip": "GreenActionPortal\\Authentication\\TokenProviderOptions.cs",
               "ViewState": "AgIAABkAAAAAAAAAAABBwBoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T03:38:08.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T03:38:08.949Z"
             },
             {
               "$type": "Document",
@@ -463,8 +447,7 @@
               "RelativeToolTip": "GreenActionPortal\\Configuration\\ConfigurationExtensions.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAcwFMAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T03:36:52.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T03:36:52.429Z"
             },
             {
               "$type": "Document",
@@ -488,8 +471,7 @@
               "RelativeToolTip": "GreenActionPortal\\Authentication\\TokenProviderMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T03:38:05.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T03:38:05.76Z"
             },
             {
               "$type": "Document",
@@ -501,8 +483,7 @@
               "RelativeToolTip": "GreenActionPortal\\Authentication\\TokenProviderOptionsFactory.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAABBwBoAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T03:38:12.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T03:38:12.299Z"
             },
             {
               "$type": "Document",
